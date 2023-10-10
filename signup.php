@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(isset($_SESSION['uid'])) {
+    header("Location: dashboard.php?error=none");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,32 +26,32 @@
                         <div class="form-group">
                             <label for="name">Full Name:</label>
                             <label>
-                                <input type="text" class="form-control" name="name" required>
+                                <input type="text" class="form-control" id="name" name="name" required>
                             </label>
                         </div>
 
                         <div class="form-group">
                             <label for="username">Username:</label>
                             <label>
-                                <input type="text" class="form-control" name="username" required>
+                                <input type="text" class="form-control" id="username" name="username" required>
                             </label>
                         </div>
 
                         <div class="form-group">
                             <label for="password">Password:</label>
                             <label>
-                                <input type="password" class="form-control" name="password" required>
+                                <input type="password" class="form-control" id="password" name="password" required>
                             </label>
                         </div>
 
                         <div class="form-group">
                             <label for="password_repeat">Repeat Password:</label>
                             <label>
-                                <input type="password" class="form-control" name="password_repeat" required>
+                                <input type="password" class="form-control" id="password_repeat" name="password_repeat" required>
                             </label>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                        <button type="submit" name="submit" class="btn btn-primary btn-block">Sign Up</button>
                     </form>
                 </div>
             </div>

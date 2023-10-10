@@ -2,7 +2,7 @@
 
 // signup-contr.classes.php
 // handle flow of signup data
-	
+
 class SignupContr extends Signup {
 	private $name;
 	private $username;

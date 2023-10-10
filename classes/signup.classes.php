@@ -1,7 +1,7 @@
 <?php
 
 // signup.classes.php
-// handle query inside database
+// handle signup query inside database
 
 class Signup extends Dbh {
 
