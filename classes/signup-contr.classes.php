@@ -1,6 +1,9 @@
 <?php
+
+// signup-contr.classes.php
+// handle flow of signup data
 	
-class SignupContr {
+class SignupContr extends Signup {
 	private $name;
 	private $username;
 	private $password;
@@ -14,35 +17,36 @@ class SignupContr {
 	}
 
 	# check for empty field
-	private function signup_user() {
+	public function signup_user() {
 		// using the function "empty_input()" to check for empty field
-		if($this->empty_input() == false) {
+		if(!$this->empty_input()) {
 			header("Location: ../index.php?error=empty-input");
 			exit();
 		}
 
 		// using the function "invalid_username()" to check for invalid username
-		if($this->invalid_username() == false) {
+		if(!$this->invalid_username()) {
 			header("Location: ../index.php?error=invalid-username");
 			exit();
 		}
 
-		if($this->password_match() == false) {
+		if(!$this->password_match()) {
 			header("Location: ../index.php?error=password-not-match");
 			exit();
 		}
 
-		if($this->username_taken_check() == false) {
+		if(!$this->username_taken_check()) {
 			header("Location: ../index.php?error=username-taken");
 			exit();
 		}
 
+        # write user to database
 		$this->set_user($this->name, $this->username, $this->password);
 	}
 
 	# check for empty field
 	private function empty_input() {
-		$result;
+        $result = null;
 		if (empty($this->name) || empty($this->username) || empty($this->password)) {
 			$result = false;
 		} else {
@@ -54,7 +58,7 @@ class SignupContr {
 
 	# check for invalid username
 	private function invalid_username() {
-		$result;
+        $result = null;
 		if (!preg_match("/^[a-zA-Z0-9]*$/", $this->username)) {
 			$result = false;
 		} else {
@@ -65,7 +69,7 @@ class SignupContr {
 
 	# check for password match
 	private function password_match() {
-		$result;
+        $result = null;
 		if ($this->password !== $this->password_repeat) {
 			$result = false;
 		} else {
@@ -76,8 +80,8 @@ class SignupContr {
 
 	# check for username taken or not
 	private function username_taken_check() {
-		$result;
-		if ($this->checkUser($this->username)) {
+        $result = null;
+		if (!$this->check_user($this->username)) {
 			$result = false;
 		} else {
 			$result = true;

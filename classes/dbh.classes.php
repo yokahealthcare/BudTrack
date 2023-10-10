@@ -6,8 +6,7 @@ class Dbh {
 		try {
 			$username = "root";
 			$password = "";
-			$dbh = new PDO('mysqli:host=localhost;dbname=budtrack', $username, $password);
-			return $dbh;
+            return new PDO('mysqli:host=localhost;dbname=budtrack', $username, $password);
 
 		} catch (PDOException $e) {
 			print("Error!: " . $e->getMessage(). " <br />");

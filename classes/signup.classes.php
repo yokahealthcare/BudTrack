@@ -11,13 +11,13 @@ class Signup extends Dbh {
 		$uid = uniqid();
 		$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-		if(!stmt->execute(array($uid, $name, $username, $password))) {
+		if(!$stmt->execute(array($uid, $name, $username, $hashed_password))) {
 			$stmt = null;
 			header("Location: ../index.php?error=stmt-failed");
 			exit();
 		}
 
-		$stmt = nul;
+		$stmt = null;
 	}
 
 	protected function check_user($username) {
@@ -30,8 +30,8 @@ class Signup extends Dbh {
 			exit();
 		}
 
-		// check if there same username exists
-        $result_check;
+		// check if their same username exists
+        $result_check = null;
 		if($stmt->rowCount() > 0) {
 			$result_check = false;
 		} else {

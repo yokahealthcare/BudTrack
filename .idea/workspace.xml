@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c2e8b162-0478-49ee-8feb-457fe2532bfb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/dbh.classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/dbh.classes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/signup-contr.classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/signup-contr.classes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/signup.classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/signup.classes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/signup.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/signup.inc.php" afterDir="false" />
@@ -14,15 +20,22 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2WXLjKpLEQwRg4aFBlPtBJlMvwE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -30,11 +43,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/User/Documents/Sampoerna University/SEMESTER 5/Software Engineering/BudTrack",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -47,6 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696874114430</updated>
       <workItem from="1696874116065" duration="147000" />
+      <workItem from="1696900481692" duration="1425000" />
     </task>
     <servers />
   </component>
