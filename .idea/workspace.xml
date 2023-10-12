@@ -5,18 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2e8b162-0478-49ee-8feb-457fe2532bfb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/classes/login-contr.classes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/login.classes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/login.inc.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/logout.inc.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/load-transaction-contr.classes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/transaction-contr.classes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/transaction.classes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/load-transaction.inc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/transaction.inc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/dbh.classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/dbh.classes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/login-contr.classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/login-contr.classes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/signup-contr.classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/signup-contr.classes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/signup.classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/signup.classes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connection.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/login.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/login.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/logout.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/logout.inc.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,21 +47,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/xampp/htdocs/BudTrack/classes",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/BudTrack/classes&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\BudTrack\classes" />
@@ -77,7 +78,10 @@
       <updated>1696874114430</updated>
       <workItem from="1696874116065" duration="147000" />
       <workItem from="1696900481692" duration="1425000" />
-      <workItem from="1696902548190" duration="6788000" />
+      <workItem from="1696902548190" duration="7179000" />
+      <workItem from="1696991930001" duration="1808000" />
+      <workItem from="1697077938621" duration="6813000" />
+      <workItem from="1697098944515" duration="654000" />
     </task>
     <servers />
   </component>

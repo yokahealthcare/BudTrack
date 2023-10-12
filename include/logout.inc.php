@@ -4,6 +4,6 @@
     session_unset();
     session_destroy();
 
-    // going to back index page
+    // going back index page
     header("Location: ../index.php?error=none");
     exit();

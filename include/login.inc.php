@@ -1,8 +1,5 @@
 <?php
 
-// login.classes.php
-// handle login query inside database
-
 if(isset($_POST["submit"])) {
     // grabbing the data
     $username = $_POST["username"];

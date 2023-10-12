@@ -1,9 +1,12 @@
 <?php
-    session_start();
-    if(!isset($_SESSION['uid'])) {
-        header("Location: login.php?error=session-not-found");
-        exit();
-    }
+session_start();
+if(!isset($_SESSION['uid'])) {
+    header("Location: login.php?error=session-not-found");
+    exit();
+} else {
+    // load all transaction to $SESSION
+    print_r($_SESSION['transactions']);
+}
 ?>
 
 <!DOCTYPE html>
@@ -72,6 +75,67 @@
                     <div class="card-body">
                         <h5 class="card-title">Financial Trends</h5>
                         <!-- Add your financial trends content here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Section -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Add Transaction</h5>
+                        <!-- Form to add a new transaction -->
+                        <form action="include/transaction.inc.php" method="post">
+                            <div class="form-group">
+                                <label for="title">Title</label>
+                                <input type="text" class="form-control" id="title" name="title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Date</label>
+                                <input type="date" class="form-control" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="type">Type</label>
+                                <select class="form-control" id="type" name="type" required>
+                                    <option value="Income">Income</option>
+                                    <option value="Expense">Expense</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="account">Account</label>
+                                <select class="form-control" id="account" name="account" required>
+                                    <option value="Personal">Personal</option>
+                                    <option value="Business">Business</option>
+                                    <option value="Family">Family</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Category</label>
+                                <select class="form-control" id="category" name="category" required>
+                                    <option value="Housing">Housing</option>
+                                    <option value="Food">Food</option>
+                                    <option value="Transportation">Transportation</option>
+                                    <option value="Health">Health</option>
+                                    <option value="Entertainment">Entertainment</option>
+                                    <option value="Saving">Saving</option>
+                                    <option value="Misc">Misc</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="amount">Amount (in rupiah)</label>
+                                <input type="number" class="form-control" id="amount" name="amount" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="status">Status</label>
+                                <select class="form-control" id="status" name="status" required>
+                                    <option value="Finish">Finish</option>
+                                    <option value="Un-Finished">Un-Finished</option>
+                                </select>
+                            </div>
+                            <button type="submit" name="submit" class="btn btn-primary">Add Transaction</button>
+                        </form>
                     </div>
                 </div>
             </div>

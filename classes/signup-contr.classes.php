@@ -16,7 +16,6 @@ class SignupContr extends Signup {
 		$this->password_repeat = $password_repeat;
 	}
 
-	# check for empty field
 	public function signup_user() {
 		// using the function "empty_input()" to check for empty field
 		if(!$this->empty_input()) {
@@ -30,11 +29,13 @@ class SignupContr extends Signup {
 			exit();
 		}
 
+        // using the function "password_match()" to check for invalid password match
 		if(!$this->password_match()) {
 			header("Location: ../index.php?error=password-not-match");
 			exit();
 		}
 
+        // using the function "username_taken_check()" to check if username already taken or not
 		if(!$this->username_taken_check()) {
 			header("Location: ../index.php?error=username-taken");
 			exit();
