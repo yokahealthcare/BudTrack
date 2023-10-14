@@ -1,5 +1,4 @@
 <?php
-
 // signup-contr.classes.php
 // handle flow of signup data
 
@@ -19,25 +18,25 @@ class SignupContr extends Signup {
 	public function signup_user() {
 		// using the function "empty_input()" to check for empty field
 		if(!$this->empty_input()) {
-			header("Location: ../index.php?error=empty-input");
+			header("Location: ../signup.php?error=empty-input");
 			exit();
 		}
 
 		// using the function "invalid_username()" to check for invalid username
 		if(!$this->invalid_username()) {
-			header("Location: ../index.php?error=invalid-username");
+			header("Location: ../signup.php?error=invalid-username");
 			exit();
 		}
 
         // using the function "password_match()" to check for invalid password match
 		if(!$this->password_match()) {
-			header("Location: ../index.php?error=password-not-match");
+			header("Location: ../signup.php?error=password-not-match");
 			exit();
 		}
 
         // using the function "username_taken_check()" to check if username already taken or not
 		if(!$this->username_taken_check()) {
-			header("Location: ../index.php?error=username-taken");
+			header("Location: ../signup.php?error=username-taken");
 			exit();
 		}
 

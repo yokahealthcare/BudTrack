@@ -1,5 +1,4 @@
 <?php
-
 // login-contr.classes.php
 // handle flow of login data
 
@@ -13,9 +12,8 @@ class LoginContr extends Login {
 	}
 
 	public function login_user() {
-		// using the function "empty_input()" to check for empty field
 		if(!$this->empty_input()) {
-			header("Location: ../index.php?error=empty-input");
+			header("Location: ../login.php?error=empty-input");
 			exit();
 		}
 
@@ -31,7 +29,6 @@ class LoginContr extends Login {
 		} else {
 			$result = true;
 		}
-
 		return $result;
 	}
 }

@@ -1,7 +1,5 @@
 <?php
-
 class Dbh {
-
 	protected function connect() {
 		try {
 			$username = "root";
@@ -9,9 +7,8 @@ class Dbh {
             return new PDO('mysql:host=localhost;dbname=budtrack', $username, $password);
 
 		} catch (PDOException $e) {
-			print("Error!: " . $e->getMessage(). " <br />");
+			print("DBH Error!: " . $e->getMessage(). " <br />");
 			die();
 		}
 	}
-
 }
