@@ -12,6 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup Page</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo/favicon/favicon.ico">
     <!-- Include Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Custom CSS for Styling -->
@@ -38,17 +39,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><b>ANJAY BudTrack</b></a>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Language
-                </a>
-                <div class="dropdown-menu" aria-labelledby="languageDropdown">
-                    <a class="dropdown-item" href="#">Indonesia</a>
-                    <a class="dropdown-item" href="#">English</a>
-                </div>
-            </li>
-        </ul>
     </div>
 </nav>
 

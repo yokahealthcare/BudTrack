@@ -1,17 +1,22 @@
 <?php
-
+/*
+ * login.inc.php
+ * handle login communication from website to server codebase
+ */
 if(isset($_POST["submit"])) {
-    // grabbing the data
+    // grabbing the data from input field from website
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    // instantiate SignupContr class
+    // import necessary modules
     include "../classes/dbh.classes.php";
     include "../classes/login.classes.php";
     include "../classes/login-contr.classes.php";
+
+    // create new object of login controller
     $login = new LoginContr($username, $password);
 
-    // running error handlers and user signup
+    // logging in the user
     $login->login_user();
 
     // going back to front page

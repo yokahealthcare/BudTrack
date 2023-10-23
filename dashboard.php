@@ -15,6 +15,7 @@ if(!isset($_SESSION['uid'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - ANJAY BudTrack</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo/favicon/favicon.ico">
     <!-- Include Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Custom CSS for Styling -->
@@ -40,21 +41,18 @@ if(!isset($_SESSION['uid'])) {
 <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><b>ANJAY BudTrack</b></a>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Language
-                </a>
-                <div class="dropdown-menu" aria-labelledby="languageDropdown">
-                    <a class="dropdown-item" href="#">Indonesia</a>
-                    <a class="dropdown-item" href="#">English</a>
-                </div>
-            </li>
-        </ul>
     </div>
 </nav>
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
+    <div class="row mt-4 mb-4">
+        <div class="col-md-6">
+            <button class="btn btn-success btn-block">Show All Transactions</button>
+        </div>
+        <div class="col-md-6">
+            <button class="btn btn-primary btn-block">New Transaction</button>
+        </div>
+    </div>
     <div class="row">
         <!-- Sidebar col-md-4 -->
         <div class="col-md-4">
@@ -63,15 +61,11 @@ if(!isset($_SESSION['uid'])) {
                     <h5>Account</h5>
                 </div>
                 <div class="card-body">
-                    <div class="dropdown">
-                        <button class="btn btn-custom dropdown-toggle" type="button" id="accountDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Personal
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="accountDropdown">
-                            <a class="dropdown-item" href="#">Family</a>
-                            <a class="dropdown-item" href="#">Business</a>
-                        </div>
-                    </div>
+                    <select class="form-control">
+                        <option value="personal">Personal</option>
+                        <option value="family">Family</option>
+                        <option value="business">Business</option>
+                    </select>
                 </div>
             </div>
 

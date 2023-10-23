@@ -1,20 +1,27 @@
 <?php
+/*
+ * signup.inc.php
+ * handle signup communication from website to server codebase
+ */
 
 if(isset($_POST["submit"])) {
-	// grabbing the data
+	// grabbing the data from input field on website
 	$name = $_POST["name"];
 	$username = $_POST["username"];
 	$password = $_POST["password"];
 	$password_repeat = $_POST["password_repeat"];
 
-	// instantiate SignupContr class
+    // import necessary modules
 	include "../classes/dbh.classes.php";
 	include "../classes/signup.classes.php";
 	include "../classes/signup-contr.classes.php";
+
+    // create new object of signup controller
 	$signup = new SignupContr($name, $username, $password, $password_repeat);
 
-	// running error handlers and user signup
+	// register the user
 	$signup->signup_user();
+
 	// going back to front page
 	header("Location: ../login.php?error=none");
 }
