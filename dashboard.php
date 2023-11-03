@@ -41,8 +41,14 @@ if(!isset($_SESSION['uid'])) {
 <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><b>ANJAY BudTrack</b></a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="include/logout.inc.php">Logout</a>
+            </li>
+        </ul>
     </div>
 </nav>
+
 
 <div class="container mt-5 mb-5">
     <div class="row mt-4 mb-4">
