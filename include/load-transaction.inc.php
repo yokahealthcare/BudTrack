@@ -6,7 +6,7 @@
 
 // start session
 session_start();
-if(isset($_POST["submit"]) && isset($_SESSION['uid'])) {
+if(isset($_SESSION['uid'])) {
     // import necessary modules
     include "../classes/dbh.classes.php";
     include "../classes/transaction.classes.php";
@@ -15,9 +15,17 @@ if(isset($_POST["submit"]) && isset($_SESSION['uid'])) {
     // create new object load transaction controller
     $load_transaction = new LoadTransactionContr();
 
-    // getting transaction
-    $load_transaction->get_transaction();
+    if($_GET["type"] == "analysis") {
+        // getting transaction analysis
+        $load_transaction->get_analysis_transaction();
+        // going back to front page
+        header("Location: ../dashboard.php?error=none");
+    } elseif ($_GET["type"] == "table") {
+        // getting transaction table
+        $load_transaction->get_table_transaction();
+        // going back to table data transaction page
+        header("Location: ../viewer.php?error=none");
+    }
 
-    // going back to front page
-    header("Location: ../dashboard.php?error=none");
+
 }

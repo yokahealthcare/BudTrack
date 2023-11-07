@@ -5,8 +5,13 @@
  */
 
 class LoadTransactionContr extends Transaction {
-    public function get_transaction() {
-        # get all transactions from database
-        $this->load_transaction();
+    public function get_analysis_transaction() {
+        # get all analysis transactions from database
+        $this->load_analysis_transaction();
+    }
+
+    public function get_table_transaction() {
+        # get all table transactions from database
+        $this->load_table_transaction();
     }
 }
