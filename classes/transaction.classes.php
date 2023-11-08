@@ -39,6 +39,33 @@ class Transaction extends Dbh {
     }
 
     /*
+     * delete_transaction()
+     * delete a transactions data from database
+     *
+     * STEPS:
+     * 1. get transaction id
+     * 2. delete transaction id from database
+     */
+    protected function remove_transaction($tid) {
+        // insert new transaction to database
+        $stmt = $this->connect()->prepare("DELETE FROM transaction WHERE tid=?;");
+
+        // execute the above query
+        // with check, if failed
+        // when it failed, user getting redirected to dashboard.php
+        if(!$stmt->execute(array($tid))) {
+            $stmt = null;
+            header("Location: ../dashboard.php?error=stmt-failed");
+            exit();
+        }
+
+        $stmt = null;
+
+        // if successfully deleted
+        return true;
+    }
+
+    /*
      * load_table_transaction()
      * load all transactions data from database
      *
@@ -161,11 +188,19 @@ class Transaction extends Dbh {
 
     protected function load_cashflow($total, $sum_income, $sum_expense)
     {
-        $tmp = [
-            "income" => number_format(($sum_expense / $total) * 100,2),
-            "expense" => number_format(($sum_income / $total) * 100,2)
-        ];
+        if($total != 0) {
+            $tmp = [
+                "income" => number_format(($sum_income / $total) * 100, 2),
+                "expense" => number_format(($sum_expense / $total) * 100, 2)
+            ];
+            return $tmp;
+        }
 
+        $tmp = [
+            "income" => 0,
+            "expense" => 0
+        ];
         return $tmp;
+
     }
 }

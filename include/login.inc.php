@@ -20,5 +20,5 @@ if(isset($_POST["submit"])) {
     $login->login_user();
 
     // going back to front page
-    header("Location: ../dashboard.php?error=none");
+    header("Location: load-transaction.inc.php?type=analysis");
 }

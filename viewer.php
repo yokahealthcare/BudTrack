@@ -24,6 +24,7 @@
             <th>Category</th>
             <th>Amount</th>
             <th>Status</th>
+            <th>Action</th>
         </tr>
         </thead>
         <tbody>
@@ -39,13 +40,19 @@
             echo "<td>" . $transaction["category"] . "</td>";
             echo "<td>" . $transaction["amount"] . "</td>";
             echo "<td>" . $transaction["status"] . "</td>";
+            echo "<td>
+                <form method=\"post\" action=\"include/delete-transaction.inc.php\">
+                    <input type=\"hidden\" name=\"tid\" value=".$transaction["tid"].">
+                    <button class=\"btn btn-danger\" name=\"submit\">Delete</button>
+                </form>
+            </td>";
             echo "</tr>";
         }
         ?>
         </tbody>
     </table>
 
-    <a href="dashboard.php">
+    <a href="include/load-transaction.inc.php?type=analysis">
         <button class="btn btn-primary">Go Back to Dashboard</button>
     </a>
 </div>
