@@ -5,9 +5,9 @@
  */
 
 class LoadTransactionContr extends Transaction {
-    public function get_analysis_transaction() {
+    public function get_analysis_transaction($account = "Personal") {
         # get all analysis transactions from database
-        $this->load_analysis_transaction();
+        $this->load_analysis_transaction($account);
     }
 
     public function get_table_transaction() {

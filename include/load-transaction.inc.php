@@ -25,7 +25,11 @@ if(isset($_SESSION['uid'])) {
         $load_transaction->get_table_transaction();
         // going back to table data transaction page
         header("Location: ../viewer.php?error=none");
+    } elseif ($_GET["type"] == "filter") {
+        $account = $_GET["account_type"];
+        // getting transaction table
+        $load_transaction->get_analysis_transaction($account);
+        // going back to table data transaction page
+        header("Location: ../dashboard.php?error=none");
     }
-
-
 }

@@ -8,8 +8,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2e8b162-0478-49ee-8feb-457fe2532bfb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/js/format.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viewer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/load-transaction-contr.classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/load-transaction-contr.classes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/transaction.classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/transaction.classes.php" afterDir="false" />
@@ -53,7 +51,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;erwin&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Documents/Sampoerna University/SEMESTER 5/Mobile Applications Development/autovital&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -97,7 +95,11 @@
       <workItem from="1698069063718" duration="6899000" />
       <workItem from="1698237946558" duration="816000" />
       <workItem from="1699004112346" duration="1652000" />
-      <workItem from="1699366549904" duration="9317000" />
+      <workItem from="1699366549904" duration="9422000" />
+      <workItem from="1699410820771" duration="3588000" />
+      <workItem from="1699432902629" duration="3572000" />
+      <workItem from="1699577892561" duration="1286000" />
+      <workItem from="1699582204152" duration="1023000" />
     </task>
     <servers />
   </component>
