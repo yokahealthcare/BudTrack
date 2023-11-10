@@ -58,12 +58,6 @@ if(!isset($_SESSION['uid'])) {
                 <button class="btn btn-success btn-block" name="submit">Show All Transactions</button>
             </form>
         </div>
-        <div class="col-md-3">
-            <form method="get" action="include/load-transaction.inc.php">
-                <input type="hidden" name="type" value="analysis">
-                <button class="btn btn-success btn-block" name="submit">Refresh Analysis Data</button>
-            </form>
-        </div>
     </div>
     <div class="row">
         <!-- Sidebar col-md-4 -->
@@ -74,11 +68,15 @@ if(!isset($_SESSION['uid'])) {
                     <h5>Account</h5>
                 </div>
                 <div class="card-body">
-                    <select class="form-control">
-                        <option value="personal">Personal</option>
-                        <option value="family">Family</option>
-                        <option value="business">Business</option>
-                    </select>
+                    <form method="get" action="include/load-transaction.inc.php">
+                        <input type="hidden" name="type" value="filter">
+                        <select class="form-control" name="account_type">
+                            <option value="Personal">Personal</option>
+                            <option value="Family">Family</option>
+                            <option value="Business">Business</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary btn-block mt-3">Filter</button>
+                    </form>
                 </div>
                 <div class="card-footer">
 
@@ -112,7 +110,11 @@ if(!isset($_SESSION['uid'])) {
                             <h3 class="text-primary"><?php echo $_SESSION["transaction"]["cashflow"]["expense"]; ?>%</h3>
                         </div>
                     </div>
-
+                    <div class="row">
+                        <div class="col-6">
+                            <canvas id="incomeExpenseChart"></canvas>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -197,19 +199,19 @@ if(!isset($_SESSION['uid'])) {
                         <!-- Title input -->
                         <div class="form-group">
                             <label for="transactionTitle">Title</label>
-                            <input type="text" name="title" class="form-control" id="transactionTitle">
+                            <input type="text" name="title" class="form-control" id="transactionTitle" required>
                         </div>
 
                         <!-- Date input -->
                         <div class="form-group">
                             <label for="transactionDate">Date</label>
-                            <input type="date" name="date" class="form-control" id="transactionDate">
+                            <input type="date" name="date" class="form-control" id="transactionDate" required>
                         </div>
 
                         <!-- Type dropdown -->
                         <div class="form-group">
                             <label for="transactionType">Type</label>
-                            <select class="form-control" name="type" id="transactionType">
+                            <select class="form-control" name="type" id="transactionType" required>
                                 <option value="Income">Income</option>
                                 <option value="Expense">Expense</option>
                             </select>
@@ -218,7 +220,7 @@ if(!isset($_SESSION['uid'])) {
                         <!-- Account dropdown -->
                         <div class="form-group">
                             <label for="transactionAccount">Account</label>
-                            <select class="form-control" name="account" id="transactionAccount">
+                            <select class="form-control" name="account" id="transactionAccount" required>
                                 <option value="Personal">Personal</option>
                                 <option value="Business">Business</option>
                                 <option value="Family">Family</option>
@@ -228,7 +230,7 @@ if(!isset($_SESSION['uid'])) {
                         <!-- Category dropdown -->
                         <div class="form-group">
                             <label for="transactionCategory">Category</label>
-                            <select class="form-control" name="category" id="transactionCategory">
+                            <select class="form-control" name="category" id="transactionCategory" required>
                                 <option value="Housing">Housing</option>
                                 <option value="Food">Food</option>
                                 <option value="Transportation">Transportation</option>
@@ -242,13 +244,13 @@ if(!isset($_SESSION['uid'])) {
                         <!-- Status dropdown -->
                         <div class="form-group">
                             <label for="transactionAmount">Amount</label>
-                            <input type="number" name="amount" class="form-control" id="transactionAmount">
+                            <input type="number" name="amount" class="form-control" id="transactionAmount" required>
                         </div>
 
                         <!-- Status dropdown -->
                         <div class="form-group">
                             <label for="transactionStatus">Status</label>
-                            <select class="form-control" name="status" id="transactionStatus">
+                            <select class="form-control" name="status" id="transactionStatus" required>
                                 <option value="Finish">Finish</option>
                                 <option value="Reserved">Reserved</option>
                             </select>
@@ -268,6 +270,7 @@ if(!isset($_SESSION['uid'])) {
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="js/format.js"></script>
 <script>
     // Get all elements with the 'balance' class
@@ -278,6 +281,31 @@ if(!isset($_SESSION['uid'])) {
         const balanceAmount = parseFloat(element.textContent);
         const formattedBalance = formatToRupiah(balanceAmount);
         element.textContent = formattedBalance;
+    });
+
+    var ctx = document.getElementById('incomeExpenseChart').getContext('2d');
+    var income = <?php echo $_SESSION["transaction"]["cashflow"]["income"]; ?>;
+    var expense = <?php echo $_SESSION["transaction"]["cashflow"]["expense"]; ?>;
+    var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Income', 'Expense'],
+            datasets: [{
+                data: [income, expense],
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.2)', // color for Income
+                    'rgba(255, 99, 132, 0.2)'  // color for Expense
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)', // color for Income
+                    'rgba(255, 99, 132, 1)'  // color for Expense
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+        }
     });
 </script>
 </body>

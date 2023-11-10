@@ -8,13 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2e8b162-0478-49ee-8feb-457fe2532bfb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/classes/delete-transaction-contr.classes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/delete-transaction.inc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/load-transaction-contr.classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/load-transaction-contr.classes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/transaction.classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/transaction.classes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/login.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/login.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viewer.php" beforeDir="false" afterPath="$PROJECT_DIR$/viewer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/load-transaction.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/load-transaction.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/transaction.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/transaction.inc.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,24 +45,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "erwin",
-    "last_opened_file_path": "C:/Users/User/Documents/Sampoerna University/SEMESTER 5/Mobile Applications Development/autovital",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;erwin&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Documents/Sampoerna University/SEMESTER 5/Mobile Applications Development/autovital&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\BudTrack\database" />
@@ -99,6 +98,8 @@
       <workItem from="1699366549904" duration="9422000" />
       <workItem from="1699410820771" duration="3588000" />
       <workItem from="1699432902629" duration="3572000" />
+      <workItem from="1699577892561" duration="1286000" />
+      <workItem from="1699582204152" duration="1023000" />
     </task>
     <servers />
   </component>

@@ -101,9 +101,9 @@ class Transaction extends Dbh {
     }
 
 
-    protected function load_analysis_transaction() {
+    protected function load_analysis_transaction($account) {
         // load the sum of income and expense dictionary
-        list($sum_income, $sum_expense) = $this->load_income_expense();
+        list($sum_income, $sum_expense) = $this->load_income_expense($account);
 
         $tmp = [
             "balance" => $this->load_balance($sum_income, $sum_expense),
@@ -111,13 +111,13 @@ class Transaction extends Dbh {
             "income" => $sum_income,
             "expense" => $sum_expense,
             "detail" => [
-                "housing" => $this->load_expense_category("Housing"),
-                "food" => $this->load_expense_category("Food"),
-                "transportation" => $this->load_expense_category("Transportation"),
-                "health" => $this->load_expense_category("Health"),
-                "entertainment" => $this->load_expense_category("Entertainment"),
-                "saving" => $this->load_expense_category("Saving"),
-                "misc" => $this->load_expense_category("Misc")
+                "housing" => $this->load_expense_category($account, "Housing"),
+                "food" => $this->load_expense_category($account, "Food"),
+                "transportation" => $this->load_expense_category($account, "Transportation"),
+                "health" => $this->load_expense_category($account, "Health"),
+                "entertainment" => $this->load_expense_category($account, "Entertainment"),
+                "saving" => $this->load_expense_category($account, "Saving"),
+                "misc" => $this->load_expense_category($account, "Misc")
             ]
         ];
 
@@ -128,16 +128,16 @@ class Transaction extends Dbh {
     }
 
 
-    protected function load_income_expense()
+    protected function load_income_expense($account)
     {
         // get the user id from the stored session variable
         $uid = $_SESSION['uid'];
 
-        $stmt = $this->connect()->prepare("SELECT SUM(amount) AS sum FROM transaction WHERE type='Income' AND uid=?;");
+        $stmt = $this->connect()->prepare("SELECT SUM(amount) AS sum FROM transaction WHERE type='Income' AND uid=? AND account=?;");
         // execute query
         // with check, if failed
         // when it failed, user get redirected to dashboard.php
-        if (!$stmt->execute(array($uid))) {
+        if (!$stmt->execute(array($uid, $account))) {
             $stmt = null;
             header("Location: ../dashboard.php?error=stmt-failed");
             exit();
@@ -146,11 +146,11 @@ class Transaction extends Dbh {
         // fetch the data
         $income = $stmt->fetch(PDO::FETCH_ASSOC)['sum'];
 
-        $stmt = $this->connect()->prepare("SELECT SUM(amount) AS sum FROM transaction WHERE type='Expense' AND uid=?;");
+        $stmt = $this->connect()->prepare("SELECT SUM(amount) AS sum FROM transaction WHERE type='Expense' AND uid=? AND account=?;");
         // execute query
         // with check, if failed
         // when it failed, user get redirected to dashboard.php
-        if (!$stmt->execute(array($uid))) {
+        if (!$stmt->execute(array($uid, $account))) {
             $stmt = null;
             header("Location: ../dashboard.php?error=stmt-failed");
             exit();
@@ -162,16 +162,16 @@ class Transaction extends Dbh {
         return [$income, $expense];
     }
 
-    protected function load_expense_category($category)
+    protected function load_expense_category($account, $category)
     {
         // get the user id from the stored session variable
         $uid = $_SESSION['uid'];
 
-        $stmt = $this->connect()->prepare("SELECT SUM(amount) AS sum FROM transaction WHERE type='Expense' AND uid=? AND category=?;");
+        $stmt = $this->connect()->prepare("SELECT SUM(amount) AS sum FROM transaction WHERE type='Expense' AND uid=? AND category=? AND account=?;");
         // execute query
         // with check, if failed
         // when it failed, user get redirected to dashboard.php
-        if (!$stmt->execute(array($uid, $category))) {
+        if (!$stmt->execute(array($uid, $category, $account))) {
             $stmt = null;
             header("Location: ../dashboard.php?error=stmt-failed");
             exit();
@@ -189,18 +189,16 @@ class Transaction extends Dbh {
     protected function load_cashflow($total, $sum_income, $sum_expense)
     {
         if($total != 0) {
-            $tmp = [
+            return [
                 "income" => number_format(($sum_income / $total) * 100, 2),
                 "expense" => number_format(($sum_expense / $total) * 100, 2)
             ];
-            return $tmp;
         }
 
-        $tmp = [
+        return [
             "income" => 0,
             "expense" => 0
         ];
-        return $tmp;
 
     }
 }
