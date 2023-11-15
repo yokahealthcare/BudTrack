@@ -8,12 +8,89 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2e8b162-0478-49ee-8feb-457fe2532bfb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/COMMITMENT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/SECURITY.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/VERSION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/get_oauth_token.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-af.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-ar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-az.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-ba.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-be.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-bg.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-ca.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-cs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-da.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-de.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-el.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-eo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-es.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-et.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-fa.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-fi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-fo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-fr.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-gl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-he.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-hi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-hr.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-hu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-hy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-id.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-it.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-ja.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-ka.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-ko.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-lt.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-lv.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-mg.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-mn.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-ms.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-nb.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-nl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-pl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-pt.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-pt_br.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-ro.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-ru.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-si.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-sk.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-sl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-sr.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-sr_latn.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-sv.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-tl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-tr.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-uk.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-vi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-zh.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/language/phpmailer.lang-zh_cn.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/src/DSNConfigurator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/src/Exception.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/src/OAuth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/src/OAuthTokenProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/src/PHPMailer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/src/POP3.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/PHPMailer-master/src/SMTP.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/account-verification.classes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/email-sender.classes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/password-updater-contr.classes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/password-updater.classes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forgot-password.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/forgot-password.inc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/update-password.inc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/verified-account.inc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new-password.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/load-transaction-contr.classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/load-transaction-contr.classes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/transaction.classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/transaction.classes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/load-transaction.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/load-transaction.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/transaction.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/transaction.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/login-contr.classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/login-contr.classes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/login.classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/login.classes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/signup-contr.classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/signup-contr.classes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/signup.classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/signup.classes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/signup.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/signup.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +114,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -52,7 +130,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;erwin&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Documents/Sampoerna University/SEMESTER 5/Mobile Applications Development/autovital&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/BudTrack/classes&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -65,11 +143,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\BudTrack\classes" />
       <recent name="C:\xampp\htdocs\BudTrack\database" />
       <recent name="C:\xampp\htdocs\BudTrack\assets\logo\banner" />
       <recent name="C:\xampp\htdocs\BudTrack\assets\logo\favicon" />
       <recent name="C:\xampp\htdocs\BudTrack\assets\logo" />
-      <recent name="C:\xampp\htdocs\BudTrack\classes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\BudTrack\assets\logo\thumbnail" />
@@ -99,7 +177,10 @@
       <workItem from="1699410820771" duration="3588000" />
       <workItem from="1699432902629" duration="3572000" />
       <workItem from="1699577892561" duration="1286000" />
-      <workItem from="1699582204152" duration="1023000" />
+      <workItem from="1699582204152" duration="1377000" />
+      <workItem from="1699583759376" duration="1214000" />
+      <workItem from="1699770121403" duration="7902000" />
+      <workItem from="1700030339157" duration="10141000" />
     </task>
     <servers />
   </component>
