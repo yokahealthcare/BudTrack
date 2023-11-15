@@ -8,6 +8,7 @@ if(isset($_POST["submit"])) {
 	// grabbing the data from input field on website
 	$name = $_POST["name"];
 	$username = $_POST["username"];
+    $email = $_POST["email"];
 	$password = $_POST["password"];
 	$password_repeat = $_POST["password_repeat"];
 
@@ -17,7 +18,7 @@ if(isset($_POST["submit"])) {
 	include "../classes/signup-contr.classes.php";
 
     // create new object of signup controller
-	$signup = new SignupContr($name, $username, $password, $password_repeat);
+	$signup = new SignupContr($name, $username, $email, $password, $password_repeat);
 
 	// register the user
 	$signup->signup_user();

@@ -21,7 +21,7 @@ class LoginContr extends Login {
 			exit();
 		}
 
-        // if there is not error occurs
+        // if there is no error occurs
         // write user to database
 		$this->get_user($this->username, $this->password);
 	}
@@ -43,4 +43,5 @@ class LoginContr extends Login {
 		}
 		return $result;
 	}
+
 }

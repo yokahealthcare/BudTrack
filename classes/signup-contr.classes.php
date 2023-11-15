@@ -7,13 +7,15 @@ class SignupContr extends Signup {
     // define private variable
 	private $name;
 	private $username;
+    private $email;
 	private $password;
 	private $password_repeat;
 
-	public function __construct($input_name, $input_username, $input_password, $input_password_repeat) {
+	public function __construct($input_name, $input_username, $input_email, $input_password, $input_password_repeat) {
         // define the private variable
 		$this->name = $input_name;
 		$this->username = $input_username;
+        $this->email = $input_email;
 		$this->password = $input_password;
 		$this->password_repeat = $input_password_repeat;
 	}
@@ -51,15 +53,8 @@ class SignupContr extends Signup {
 			exit();
 		}
 
-        // checking username is taken or not
-        // if failed, redirect user to signup.php
-		if(!$this->username_taken_check()) {
-			header("Location: ../signup.php?error=username-taken");
-			exit();
-		}
-
         // write user to database
-		$this->new_user($this->name, $this->username, $this->password);
+		$this->new_user($this->name, $this->username, $this->email, $this->password);
 	}
 
 	# check for empty field
@@ -89,17 +84,6 @@ class SignupContr extends Signup {
 	private function password_match() {
         $result = null;
 		if ($this->password !== $this->password_repeat) {
-			$result = false;
-		} else {
-			$result = true;
-		}
-		return $result;
-	}
-
-	# check for username taken or not
-	private function username_taken_check() {
-        $result = null;
-		if (!$this->check_user($this->username)) {
 			$result = false;
 		} else {
 			$result = true;
