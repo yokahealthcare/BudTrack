@@ -45,6 +45,20 @@ class TransactionContr extends Transaction {
         $this->new_transaction($this->title, $this->date, $this->type, $this->account, $this->category, $this->amount, $this->status);
     }
 
+    // write update transaction to database and replace the old one
+    public function updateTransaction() {
+        // check for empty input
+        // with check, if failed
+        // when it failed, user get redirected to dashboard.php
+        if (!$this->empty_input()) {
+            header("Location: ../dashboard.php?error=empty-input");
+            exit();
+        }
+
+        # write transaction to database
+        $this->update_transaction($this->title, $this->date, $this->type, $this->account, $this->category, $this->amount, $this->status);
+    }
+
     /*
      * empty_input()
      * check for empty input data

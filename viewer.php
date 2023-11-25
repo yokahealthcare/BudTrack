@@ -45,6 +45,10 @@
                     <input type=\"hidden\" name=\"tid\" value=".$transaction["tid"].">
                     <button class=\"btn btn-danger\" name=\"submit\">Delete</button>
                 </form>
+                <form method=\"post\" action=\"update-transaction.php\">
+                    <input type=\"hidden\" name=\"tid\" value=".$transaction["tid"].">
+                    <button class=\"btn btn-info\" name=\"submit\">Edit</button>
+                </form>
             </td>";
             echo "</tr>";
         }
