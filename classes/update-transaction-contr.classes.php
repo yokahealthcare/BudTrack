@@ -3,8 +3,9 @@
  * transaction-contr.classes.php
  * handle flow of transaction data
  */
-class TransactionContr extends Transaction {
+class UpdateTransactionContr extends Transaction {
     // define private variable
+    private $tid;
     private $title;
     private $date;
     private $type;
@@ -13,8 +14,9 @@ class TransactionContr extends Transaction {
     private $amount;
     private $status;
 
-    public function __construct($title, $date, $type, $account, $category, $amount, $status) {
+    public function __construct($tid, $title, $date, $type, $account, $category, $amount, $status) {
         // define private variable values
+        $this->tid = $tid;
         $this->title = $title;
         $this->date = $date;
         $this->type = $type;
@@ -24,31 +26,18 @@ class TransactionContr extends Transaction {
         $this->status = $status;
     }
 
-    /*
-     * transaction_user()
-     * checking input data before write it to database
-     *
-     * STEPS:
-     * 1. check for empty input
-     * 2. register new transaction to database
-     */
-    public function transaction_user() {
-        // check for empty input
-        // with check, if failed
-        // when it failed, user get redirected to dashboard.php
+
+    // Inside TransactionContr class
+    public function updateTransaction() {
         if (!$this->empty_input()) {
             header("Location: ../dashboard.php?error=empty-input");
             exit();
         }
 
-        # write transaction to database
-        $this->new_transaction($this->title, $this->date, $this->type, $this->account, $this->category, $this->amount, $this->status);
+        # delete transactions from database
+        return $this->update_transaction($this->tid, $this->title, $this->date, $this->type, $this->account, $this->category, $this->amount, $this->status);
     }
 
-    /*
-     * empty_input()
-     * check for empty input data
-     */
     private function empty_input() {
         $result = null;
         // check for any private variable that has no value in it
@@ -62,4 +51,6 @@ class TransactionContr extends Transaction {
 
         return $result;
     }
+
+    
 }
