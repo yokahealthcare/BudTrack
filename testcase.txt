@@ -1,9 +1,0 @@
-SCENARIO TEST CASE
-1. USER forgot password
-2. LOGIN
-	- empty input
-3. SIGNUP
-	- empty input
-	- existing username
-	- not match password
-4.  ....
