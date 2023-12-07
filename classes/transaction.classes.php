@@ -64,6 +64,21 @@ class Transaction extends Dbh {
         // if successfully deleted
         return true;
     }
+    protected function update_transaction($tid, $title, $date, $type, $account, $category, $amount, $status) {
+        // insert new transaction to database
+        $stmt = $this->connect()->prepare("UPDATE transaction SET title = ?, date = ?, type = ?, account = ?, category = ?, amount = ?, status = ? WHERE tid = ?;");
+
+        // execute the above query
+        // with check, if failed
+        // when it failed, user getting redirected to dashboard.php
+        if(!$stmt->execute(array($title, $date, $type, $account, $category, $amount, $status, $tid))) {
+            $stmt = null;
+            header("Location: ../dashboard.php?error=stmt-failed");
+            exit();
+        }
+
+        $stmt = null;
+    }
 
     /*
      * load_table_transaction()

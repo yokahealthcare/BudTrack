@@ -45,6 +45,17 @@
                     <input type=\"hidden\" name=\"tid\" value=".$transaction["tid"].">
                     <button class=\"btn btn-danger\" name=\"submit\">Delete</button>
                 </form>
+                <form method=\"get\" action=\"update-viewer.php\">
+                    <input type=\"hidden\" name=\"tid\" value=".$transaction["tid"].">
+                    <input type=\"hidden\" name=\"title\" value=".$transaction["title"].">
+                    <input type=\"hidden\" name=\"date\" value=".$transaction["date"].">
+                    <input type=\"hidden\" name=\"type\" value=".$transaction["type"].">
+                    <input type=\"hidden\" name=\"account\" value=".$transaction["account"].">
+                    <input type=\"hidden\" name=\"category\" value=".$transaction["category"].">
+                    <input type=\"hidden\" name=\"amount\" value=".$transaction["amount"].">
+                    <input type=\"hidden\" name=\"status\" value=".$transaction["status"].">
+                    <button class=\"btn btn-info\" name=\"submit\">Edit</button>
+                </form>
             </td>";
             echo "</tr>";
         }
@@ -55,6 +66,7 @@
     <a href="include/load-transaction.inc.php?type=analysis">
         <button class="btn btn-primary">Go Back to Dashboard</button>
     </a>
+    
 </div>
 
 <!-- Include Bootstrap 4 JS and jQuery (if needed) -->
