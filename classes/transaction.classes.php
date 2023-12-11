@@ -78,6 +78,8 @@ class Transaction extends Dbh {
         }
 
         $stmt = null;
+        // if successfully deleted
+        return true;
     }
 
     /*
